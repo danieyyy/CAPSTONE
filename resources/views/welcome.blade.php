@@ -78,6 +78,7 @@
             }
 
             .welcome__footer {
+                font-weight: bold;
                 color: #274472;
                 margin: 10px;
             }
