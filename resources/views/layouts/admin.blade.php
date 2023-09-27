@@ -17,6 +17,148 @@
 
       <!-- Scripts -->
       @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+      <!-- Stylesheet -->
+      <style>
+        main.py-4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #c3e0e5;
+        }
+
+        nav.navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #5885af !important;
+        }
+
+        .navbar__item {
+            color: #c3e0e5 !important;
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        .logo__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c3e0e5;
+            background-color: #5885af;
+            padding: 5px 0px;
+            font-weight: bold;
+        }
+
+        div.card {
+            display: flex;
+            flex-direction: column;
+            background-color: #274472;
+            padding: 20px 0px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,1),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .card__logo {
+            width: 150px;
+        }
+
+        .logoName {
+            color: #c3e0e5;
+            font-weight: bold;
+        }
+
+        .card__logoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.row.mb-3.inputField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.col-md-8.offset-md-4 {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        div.row.mb-0 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.row.mb-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.col-md-6.offset-md-4.rememberMe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .form-check-label {
+            color: #c3e0e5;
+        }
+
+        a.btn.btn-link {
+            color: #c3e0e5;
+        }
+
+        button.btn.btn-primary {
+            color:#c3e0e5;
+            background-color: #5885af;
+            border: #5885af;
+            transition: background-color 0.01s;
+        }
+
+        button.btn.btn-primary:hover {
+            color: #274472;
+            background-color: #c3e0e5;
+        }
+
+        /* Register */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c3e0e5;
+        }
+
+        label.col-md-4.col-form-label.text-md-end {
+            color: #c3e0e5;
+        }
+
+        div.col-md-6.offset-md-4.register {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 0 0;
+        }
+
+    </style>
   </head>
   <body>
     <div id="app">
@@ -26,36 +168,17 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
           <div class="container-fluid">
               
-            <a class="navbar-brand" href="#"></a>
+            <div class="logo__container">
+                <img src="{{ asset('images/logo.png') }}" alt="ABC Tech Logo" class="logo">
+                    <a class="navbar-brand navbar__item" href="{{ url('/') }}">
+                        {{ config('app.name', 'ABC Tech Inc.') }}
+                    </a>
+            </div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href=<?php echo env('APP_URL'); ?>/capstone-final/products>Product List</a>
-                </li>
-
-                <!--
-                  
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                -->
-              </ul>
-
+              
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
@@ -98,8 +221,6 @@
                       @endguest
                 </ul>
               </div>
-              
-            </div>
 
           </div>
   
@@ -111,10 +232,8 @@
         @yield('content')
       </main>
 
-      <footer class="container d-flex align-items-center justify-content-center">
-        <div class="footer">
+      <footer>
           NBS | EOTS v1.1.1
-        </div>
       </footer>
 
     </div>
