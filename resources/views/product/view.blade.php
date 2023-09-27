@@ -24,7 +24,7 @@
 <script>
 
 function productList(){
-  window.location.href = "<?php echo env('APP_URL'); ?>/capstone-final/products";
+  window.location.href = "<?php echo env('APP_URL'); ?>/capstone/products";
 }
 
 </script>
