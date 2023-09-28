@@ -6,6 +6,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDisplayController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ModulesController;
+use App\Http\Controllers\MilestonesController;
+use App\Http\Controllers\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,4 +66,12 @@ Route::get('/database/{employee}', [EmployeeController::class, 'show'])->name('e
 Route::get('/database/{employee}/edit', [EmployeeController::class, 'edit'])->name('employees.edit');
 Route::put('/database/{employee}', [EmployeeController::class, 'update'])->name('employees.update');
 Route::delete('/database/{employee}', [EmployeeController::class, 'destroy'])->name('employees.destroy');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::get('/modules', [ModulesController::class, 'index'])->name('modules.index');
+
+Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestones.index');
+
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 
