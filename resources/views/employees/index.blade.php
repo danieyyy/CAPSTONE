@@ -1,11 +1,16 @@
 @extends('layouts.admin')
-
+<style>
+        main.py-4{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 @section('content')
 <div class="container">
     <h1>ABC Tech Inc. Employee List</h1>
 
     <!-- Add Employee Button -->
-    <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3">Add Employee</a>
+    <a href="{{ route('employees.create') }}" class="btn btn-success mb-3">Add Employee</a>
 
     <!-- Employee Table -->
     <table class="table table-striped">
@@ -28,8 +33,8 @@
                 <td>{{ $employee->phoneNumber }}</td>
                 <td>{{ $employee->dateHired }}</td>
                 <td>
-                    <a href="{{ route('employees.show', ['employee' => $employee->employeeNumber]) }}" class="btn btn-info btn-sm">View</a>
-                    <a href="{{ route('employees.edit', ['employee' => $employee->employeeNumber]) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ route('employees.show', ['employee' => $employee->employeeNumber]) }}" class="btn btn-primary btn-sm">View</a>
+                    <a href="{{ route('employees.edit', ['employee' => $employee->employeeNumber]) }}" class="btn btn-secondary btn-sm">Edit</a>
                     <form action="{{ route('employees.destroy', ['employee' => $employee->employeeNumber]) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')

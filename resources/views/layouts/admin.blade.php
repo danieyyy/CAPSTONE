@@ -22,7 +22,7 @@
       <style>
         main.py-4 {
             display: flex;
-            align-items: center;
+            /* align-items: center; */
             justify-content: center;
             height: 100vh;
             background-color: #c3e0e5;
