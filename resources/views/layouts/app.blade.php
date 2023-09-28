@@ -156,6 +156,93 @@
             margin: 30px 0 0 0;
         }
 
+        /* Homepage */
+        .content__iconContainer {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .home__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #274472;
+        }
+
+        h1.content__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        p.content__welcome {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: x-large;
+            font-weight: bold;
+            margin: 2% 10%;
+        }
+
+        p.content__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 2% 10%;
+        }
+
+        .iconItem {
+            margin: 2% 1%;
+        }
+
+        .icon__unit {
+            flex: 1;
+            margin: 2% 1%;
+            background-color: #41729f;
+            border-radius: 10px;
+            padding: 10px;
+            transition: background-color 0.01s;
+        }
+
+        .icon__unit:hover {
+            background-color: #274472;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,1), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        #icon__dashboard {
+            float: left;
+            width: 150px;
+        }
+        
+        #icon__modules {
+            float: left;
+            width: 150px;
+        }
+        
+        #icon__milestones {
+            float: left;
+            width: 150px;
+        }
+        
+        #icon__database {
+            float: left;
+            width: 150px;
+        }
+        
+        #icon__feedback {
+            float: left;
+            width: 150px;
+        }
+
     </style>
 </head>
 <body>
