@@ -73,5 +73,5 @@ Route::get('/modules', [ModulesController::class, 'index'])->name('modules.index
 
 Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestones.index');
 
-Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
-
+Route::get('/feedback', [FeedbackController::class, 'showForm'])->name('feedback.form');
+Route::post('/feedback', [FeedbackController::class, 'submitForm'])->name('feedback.submit');
