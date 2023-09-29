@@ -89,25 +89,6 @@
             color: #274472;
             background-color: #c3e0e5;
         }
-
-        /* Register */
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #c3e0e5;
-        }
-
-        label.col-md-4.col-form-label.text-md-end {
-            color: #c3e0e5;
-        }
-
-        div.col-md-6.offset-md-4.register {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 30px 0 0 0;
-        }
 </style>
 
 @section('content')

@@ -140,7 +140,7 @@
                                     <a class="nav-link navbar__item" href="/modules">{{ __('Modules') }}</a>
                                     </li>
                                     <li class="navbar__list">
-                                    <a class="nav-link navbar__item" href="/milestone">{{ __('Milestones') }}</a>
+                                    <a class="nav-link navbar__item" href="/milestones">{{ __('Milestones') }}</a>
                                     </li>
                                     <li class="navbar__list">
                                     <a class="nav-link navbar__item" href="/feedback">{{ __('Feedback') }}</a>

@@ -69,9 +69,9 @@ Route::delete('/database/{employee}', [EmployeeController::class, 'destroy'])->n
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-Route::get('/modules', [ModulesController::class, 'index'])->name('modules.index');
+Route::get('/modules', [ModulesController::class, 'index'])->name('module.index');
 
-Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestones.index');
+Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestone.index');
 
 Route::get('/feedback', [FeedbackController::class, 'showForm'])->name('feedback.form');
 Route::post('/feedback', [FeedbackController::class, 'submitForm'])->name('feedback.submit');
