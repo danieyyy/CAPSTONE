@@ -75,6 +75,4 @@ class EmployeeController extends Controller
         // Redirect to the employees list with a success message
         return redirect()->route('employees.index')->with('success', 'Employee deleted successfully');
     }
-
-    // Implement show, edit, update, and destroy methods similarly
 }
