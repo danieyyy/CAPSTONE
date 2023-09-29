@@ -30,10 +30,10 @@ class ModulesController extends Controller
             return view('admin.module.index');
 
         } else if(Auth::user()->fk_user_type_id == 2){
-            return view('home');
+            return view('module.index');
 
         } else {
-            return view('home');
+            return view('module.index');
         }
 
     }

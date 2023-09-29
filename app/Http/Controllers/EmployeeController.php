@@ -72,7 +72,6 @@ class EmployeeController extends Controller
 
         $employee->delete(); // Delete the employee record
 
-        // Redirect to the employees list with a success message
         return redirect()->route('admin.employees.index')->with('success', 'Employee deleted successfully');
     }
 }

@@ -30,10 +30,10 @@ class DashboardController extends Controller
             return view('admin.dashboard.index');
 
         } else if(Auth::user()->fk_user_type_id == 2){
-            return view('home');
+            return view('dashboard.index');
 
         } else {
-            return view('home');
+            return view('dashboard.index');
         }
 
     }

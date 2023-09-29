@@ -72,6 +72,8 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/modules', [ModulesController::class, 'index'])->name('module.index');
 
 Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestone.index');
+Route::get('/milestones/{id}', [RewardClaimController::class, 'claim'])->name('claim');
+Route::post('/milestones/{id}', [RewardClaimController::class, 'processClaim']);
 
 Route::get('/feedback', [FeedbackController::class, 'showForm'])->name('feedback.form');
 Route::post('/feedback', [FeedbackController::class, 'submitForm'])->name('feedback.submit');

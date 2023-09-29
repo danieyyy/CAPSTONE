@@ -30,10 +30,10 @@ class MilestonesController extends Controller
             return view('admin.milestone.index');
 
         } else if(Auth::user()->fk_user_type_id == 2){
-            return view('home');
+            return view('milestone.index');
 
         } else {
-            return view('home');
+            return view('milestone.index');
         }
 
     }
