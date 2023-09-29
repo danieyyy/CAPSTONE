@@ -1,5 +1,115 @@
 @extends('layouts.app')
 
+<style>
+    .py-4{
+        align-items: center;
+    }
+    label.login_text {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        color: c3e0e5;
+    }
+
+    div.card {
+            display: flex;
+            flex-direction: column;
+            background-color: #274472;
+            padding: 20px 0px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,1),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .card__logo {
+            width: 150px;
+        }
+
+        .logoName {
+            color: #c3e0e5;
+            font-weight: bold;
+        }
+
+        .card__logoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.row.mb-3.inputField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.col-md-8.offset-md-4 {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        div.row.mb-0 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.row.mb-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.col-md-6.offset-md-4.rememberMe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .form-check-label {
+            color: #c3e0e5;
+        }
+
+        a.btn.btn-link {
+            color: #c3e0e5;
+        }
+
+        button.btn.btn-primary {
+            color:#c3e0e5;
+            background-color: #5885af;
+            border: #5885af;
+            transition: background-color 0.01s;
+        }
+
+        button.btn.btn-primary:hover {
+            color: #274472;
+            background-color: #c3e0e5;
+        }
+
+        /* Register */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c3e0e5;
+        }
+
+        label.col-md-4.col-form-label.text-md-end {
+            color: #c3e0e5;
+        }
+
+        div.col-md-6.offset-md-4.register {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 0 0;
+        }
+</style>
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -16,6 +126,8 @@
                         </div>
 
                         <div class="row mb-3 inputField">
+                            <label class="login_text mb-2"><b>{{ __('E-Mail Address') }}</b></label>
+                            {{-- <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label> --}}
                             {{-- <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label> --}}
 
                             <div class="col-md-6">
@@ -30,6 +142,7 @@
                         </div>
 
                         <div class="row mb-3 inputField">
+                            <label class="login_text mb-2"><b>{{ __('Password') }}</b></label>
                             {{-- <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label> --}}
 
                             <div class="col-md-6">

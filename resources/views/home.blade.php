@@ -20,7 +20,6 @@
         <div class="icon__dashboard iconItem"><a href="/dashboard" class="iconImg"><img src="{{ asset('images/dashboard.png') }}" alt="dashboard icon" id="icon__dashboard" class="icon__unit"></a></div>
         <div class="icon__modules iconItem"><a href="/modules" class="iconImg"><img src="{{ asset('images/modules.png') }}" alt="modules icon" id="icon__modules" class="icon__unit"></a></div>
         <div class="icon__milestones iconItem"><a href="/milestones" class="iconImg"><img src="{{ asset('images/milestones.png') }}" alt="milestones icon" id="icon__milestones" class="icon__unit"></a></div>
-        <div class="icon__database iconItem"><a href="/database" class="iconImg"><img src="{{ asset('images/database.png') }}" alt="database icon" id="icon__database" class="icon__unit"></a></div>
         <div class="icon__feedback iconItem"><a href="/feedback" class="iconImg"><img src="{{ asset('images/feedback.png') }}" alt="feedback icon" id="icon__feedback" class="icon__unit"></a></div>
     </div>
 </div>

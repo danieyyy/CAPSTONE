@@ -21,7 +21,7 @@ class EmployeeController extends Controller
 
     public function store(Request $request)
     {
-        // Validate and store the new employee data
+        // Validation
         $validatedData = $request->validate([
             'employeeNumber' => 'required',
             'fullName' => 'required',
