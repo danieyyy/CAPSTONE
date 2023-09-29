@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin_page')
 
 <style>
     th, td {

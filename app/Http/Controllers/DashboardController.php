@@ -2,15 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-// use App\Models\Employee;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Dashboard;
 
 class DashboardController extends Controller
 {
-    public function index()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        return view('dashboard.index');
+        $this->middleware('auth');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+
+    public function index()
+    {
+        if(Auth::user()->fk_user_type_id == 1){
+            return view('admin.dashboard.index');
+
+        } else if(Auth::user()->fk_user_type_id == 2){
+            return view('home');
+
+        } else {
+            return view('home');
+        }
+
+    }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin_page')
 <style>
         main.py-4{
             display: flex;
