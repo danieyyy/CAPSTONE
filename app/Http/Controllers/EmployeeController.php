@@ -4,14 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $employees = Employee::all();
-        return view('admin.employees.index', compact('employees'));
+        if(Auth::user()->fk_user_type_id == 1){
+            $employees = Employee::all();
+            return view('admin.employees.index', compact('employees'));
+            // return view('admin.employees.index');
+
+        } else if(Auth::user()->fk_user_type_id == 2){
+            return view('home');
+
+        } else {
+            return view('home');
+        }
     }
 
     public function create()

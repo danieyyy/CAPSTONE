@@ -97,5 +97,7 @@
         background-color: #41729f !important;
         border-color: #41729f !important;
         text-align: center;
+        color: #c3e0e5 !important;
+        font-weight: bold;
     }
 </style>
