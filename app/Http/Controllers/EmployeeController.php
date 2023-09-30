@@ -56,7 +56,7 @@ class EmployeeController extends Controller
         ]);
 
         Employee::create($validatedData);
-        return redirect()->route('admin.employees.index')->with('success', 'Employee created successfully.');
+        return redirect()->route('employees.index')->with('success', 'Employee created successfully.');
     }
 
     public function show($id)
@@ -88,7 +88,7 @@ class EmployeeController extends Controller
         $employee->update($validatedData);
 
         // Redirect to the employee details page or the employee list
-        return redirect()->route('admin.employees.show', ['employee' => $employee->employeeNumber])->with('success', 'Employee updated successfully');
+        return redirect()->route('employees.show', ['employee' => $employee->employeeNumber])->with('success', 'Employee updated successfully');
     }
 
     public function destroy($id)
@@ -97,6 +97,6 @@ class EmployeeController extends Controller
 
         $employee->delete(); // Delete the employee record
 
-        return redirect()->route('admin.employees.index')->with('success', 'Employee deleted successfully');
+        return redirect()->route('employees.index')->with('success', 'Employee deleted successfully');
     }
 }

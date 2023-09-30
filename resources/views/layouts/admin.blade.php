@@ -144,6 +144,20 @@
             width: 150px;
         }
 
+        @media screen and (max-width: 700px) {
+        .content__iconContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .py-4 {
+            height: 100vh;
+            overflow: scroll;
+        }
+        }
+
     </style>
 </head>
 <body>

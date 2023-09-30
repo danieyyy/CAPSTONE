@@ -77,9 +77,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             padding-top: 50px;
             font-weight: bold;
             margin: 0;
+           
         }
 
         p.content__welcome {
@@ -142,6 +144,19 @@
         #icon__feedback {
             float: left;
             width: 150px;
+        }
+
+        @media screen and (max-width: 700px) {
+        .content__iconContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .py-4 {
+            height: 100vh;
+            overflow: scroll;
         }
 
     </style>
