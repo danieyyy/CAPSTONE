@@ -134,6 +134,9 @@
 
                                 <ul class="pages">
                                     <li class="navbar__list">
+                                    <a class="nav-link navbar__item" href="/home">{{ __('Home') }}</a>
+                                    </li>
+                                    <li class="navbar__list">
                                     <a class="nav-link navbar__item" href="/dashboard">{{ __('Dashboard') }}</a>
                                     </li>
                                     <li class="navbar__list">
