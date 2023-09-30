@@ -54,21 +54,31 @@ Route::post('/feedback', [FeedbackController::class, 'submitForm'])->name('feedb
 
 
 
-Route::get('/products', [ProductController::class, 'index'])->name('product_index');
-Route::get('/products/create', [ProductController::class, 'create'])->name('product_create');
-Route::post('/products/store', [ProductController::class, 'store'])->name('product_store');
-Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('product_edit');
-Route::get('/products/delete/{id}', [ProductController::class, 'delete'])->name('product_delete');
-Route::get('/products/view/{id}', [ProductController::class, 'view'])->name('product_view');
 
-Route::post('/display/selected', [ProductDisplayController::class, 'selectedItems'])->name('display_selected');
-Route::get('/display/list', [ProductDisplayController::class, 'list'])->name('display_list');
-Route::get('/display/cart', [ProductDisplayController::class, 'cart'])->name('display_cart');
 
-Route::get('/user/seller-regs', [SellerController::class, 'create'])->name('seller_registration');
-Route::post('/user/seller-store', [SellerController::class, 'store'])->name('seller_store');
-Route::get('/user/seller-list', [SellerController::class, 'list'])->name('seller_list');
 
-Route::get('/seller/product-form', [SellerController::class, 'createProductForm'])->name('createProductForm');
-Route::post('/seller/product-store', [SellerController::class, 'storeProduct'])->name('storeProduct');
-Route::get('/seller/product-list', [SellerController::class, 'productList'])->name('productList');
+
+
+
+
+
+
+
+// Route::get('/products', [ProductController::class, 'index'])->name('product_index');
+// Route::get('/products/create', [ProductController::class, 'create'])->name('product_create');
+// Route::post('/products/store', [ProductController::class, 'store'])->name('product_store');
+// Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('product_edit');
+// Route::get('/products/delete/{id}', [ProductController::class, 'delete'])->name('product_delete');
+// Route::get('/products/view/{id}', [ProductController::class, 'view'])->name('product_view');
+
+// Route::post('/display/selected', [ProductDisplayController::class, 'selectedItems'])->name('display_selected');
+// Route::get('/display/list', [ProductDisplayController::class, 'list'])->name('display_list');
+// Route::get('/display/cart', [ProductDisplayController::class, 'cart'])->name('display_cart');
+
+// Route::get('/user/seller-regs', [SellerController::class, 'create'])->name('seller_registration');
+// Route::post('/user/seller-store', [SellerController::class, 'store'])->name('seller_store');
+// Route::get('/user/seller-list', [SellerController::class, 'list'])->name('seller_list');
+
+// Route::get('/seller/product-form', [SellerController::class, 'createProductForm'])->name('createProductForm');
+// Route::post('/seller/product-store', [SellerController::class, 'storeProduct'])->name('storeProduct');
+// Route::get('/seller/product-list', [SellerController::class, 'productList'])->name('productList');
